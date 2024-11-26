@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eceef2;
+            text-align: center;
+        }
+        .stream-container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        .refresh-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #3749b4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Streaming</h1>
+    <div class="stream-container">
+        <iframe src="https://engageboost.xyz/soccer/stream2/" allowfullscreen></iframe>
+        <button class="refresh-button" onclick="refreshStream()">
+            Refresh Stream <i class="fa fa-refresh"></i>
+        </button>
+    </div>
+    <script>
+        function refreshStream() {
+            const iframe = document.querySelector('iframe');
+            iframe.src = iframe.src; // Refresh the iframe
+        }
+    </script>
+</body>
+</html>
